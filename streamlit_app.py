@@ -6,7 +6,7 @@ from src.pipeline import query_rag, add_documents
 st.set_page_config(page_title="AI FAQ Assistant", page_icon="🤖")
 
 st.title("🤖 AI FAQ RAG Assistant")
-st.markdown("I answer questions based on your custom database using Gemini 1.5 Flash.")
+st.markdown("I answer questions based on your custom database using Gemini 3.5 Flash lite.")
 
 # --- SIDEBAR: Database Management ---
 with st.sidebar:
