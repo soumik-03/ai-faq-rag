@@ -48,6 +48,16 @@ collection = client.get_or_create_collection(
 sample_faq = [
 
     # --------------------------------------------------------
+    # GENERAL FAQ GUIDE
+    # --------------------------------------------------------
+
+    "What topics does my data cover? The FAQ dataset covers orders, shipping, returns, refunds, payments, account management, customer support, and technical support.",
+
+    "What should I know before getting started? You can find help with placing and tracking orders, shipping, returns and refunds, payment methods, account settings, customer support, and common technical issues.",
+
+    "Summarise the key points for me. Orders can be placed and tracked through your account, eligible products can be returned within 14 days, refunds are usually processed within 5 to 7 business days, supported payment methods include major cards and selected online methods, and support is available for account and technical issues.",
+
+    # --------------------------------------------------------
     # ORDERS
     # --------------------------------------------------------
 
