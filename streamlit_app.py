@@ -593,6 +593,8 @@ if st.session_state.show_enquiry:
 # HERO
 # ============================================================
 
+selected_question = None
+
 if not st.session_state.messages:
 
     st.markdown(
@@ -634,8 +636,6 @@ if not st.session_state.messages:
 
     s1, s2 = st.columns(2)
 
-    selected_question = None
-
     with s1:
 
         if st.button(
@@ -669,18 +669,6 @@ if not st.session_state.messages:
             )
 
 
-    if selected_question:
-
-        st.session_state.messages.append(
-            {
-                "role": "user",
-                "content": selected_question
-            }
-        )
-
-        st.rerun()
-
-
 # ============================================================
 # CHAT HISTORY
 # ============================================================
@@ -703,6 +691,10 @@ for message in st.session_state.messages:
 prompt = st.chat_input(
     "Ask a question..."
 )
+
+if selected_question and not prompt:
+
+    prompt = selected_question
 
 
 if prompt:
